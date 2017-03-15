@@ -3,9 +3,6 @@ package org.jmonkey.module.user.model;
 import org.codehaus.jackson.annotate.JsonProperty;
 import org.jmonkey.module.base.model.BaseEntity;
 
-import javax.xml.bind.annotation.XmlType;
-
-@XmlType(name = "user")
 public class UserEntity extends BaseEntity {
 
     @JsonProperty("id")

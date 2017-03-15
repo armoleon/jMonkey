@@ -12,7 +12,7 @@ import javax.xml.bind.annotation.XmlAccessorType;
 public abstract class BaseEntity {
 
     @BeanIgnore
-    private BeanMapperBuilder beanMapperBuilder = new BeanMapperBuilder();
+    protected BeanMapperBuilder beanMapperBuilder = new BeanMapperBuilder();
 
     public <T extends BaseDto> T toDto(Class<T> t) {
         return beanMapperBuilder.build().map(this, t);
