@@ -1,38 +1,17 @@
 package org.jmonkey.module.user.model;
 
-import org.codehaus.jackson.annotate.JsonProperty;
-import org.jmonkey.module.base.model.BaseEntity;
+import org.jmonkey.module.base.model.BaseDto;
 
-import javax.xml.bind.annotation.XmlType;
+public class User extends BaseDto {
 
-@XmlType(name = "user")
-public class UserEntity extends BaseEntity {
-
-    @JsonProperty("id")
     private String id;
-
-    @JsonProperty("username")
     private String userName;
-
-    @JsonProperty("first_name")
     private String firstName;
-
-    @JsonProperty("last_name")
     private String lastName;
-
-    @JsonProperty("language")
     private String language;
-
-    @JsonProperty("email")
     private String email;
-
-    @JsonProperty("account_type")
     private String accountType;
-
-    @JsonProperty("date_created")
     private String creationDate;
-
-    @JsonProperty("date_last_login")
     private String lastLoginDate;
 
     public String getId() {
