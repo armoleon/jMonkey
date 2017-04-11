@@ -16,5 +16,4 @@ public class UserService extends BaseService {
         return userClient.getUser().toDto(User.class);
     }
 
-
 }
