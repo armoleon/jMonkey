@@ -1,6 +1,10 @@
 package org.jmonkey.module.survey.model;
 
+import io.beanmapper.annotations.BeanCollection;
+import io.beanmapper.annotations.BeanCollectionUsage;
 import org.jmonkey.module.base.model.BaseDto;
+
+import java.util.List;
 
 public class Survey extends BaseDto {
 
@@ -10,6 +14,7 @@ public class Survey extends BaseDto {
     private String category;
     private String language;
     private String questionCount;
+    private String responseCount;
     private String pageCount;
     private String dateCreated;
     private String dateModified;
@@ -20,6 +25,9 @@ public class Survey extends BaseDto {
     private String collectUrl;
     private String analyzeUrl;
     private String summaryUrl;
+
+    @BeanCollection(elementType = Page.class, beanCollectionUsage = BeanCollectionUsage.CONSTRUCT)
+    private List<Page> pages;
 
     public String getSurveyId() {
         return surveyId;
@@ -67,6 +75,14 @@ public class Survey extends BaseDto {
 
     public void setQuestionCount(String questionCount) {
         this.questionCount = questionCount;
+    }
+
+    public String getResponseCount() {
+        return responseCount;
+    }
+
+    public void setResponseCount(String responseCount) {
+        this.responseCount = responseCount;
     }
 
     public String getPageCount() {
@@ -147,5 +163,13 @@ public class Survey extends BaseDto {
 
     public void setSummaryUrl(String summaryUrl) {
         this.summaryUrl = summaryUrl;
+    }
+
+    public List<Page> getPages() {
+        return pages;
+    }
+
+    public void setPages(List<Page> pages) {
+        this.pages = pages;
     }
 }

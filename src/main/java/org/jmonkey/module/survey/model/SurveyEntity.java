@@ -3,6 +3,8 @@ package org.jmonkey.module.survey.model;
 import org.codehaus.jackson.annotate.JsonProperty;
 import org.jmonkey.module.common.model.PaginationEntity;
 
+import java.util.List;
+
 public class SurveyEntity extends PaginationEntity {
 
     @JsonProperty("id")
@@ -22,6 +24,9 @@ public class SurveyEntity extends PaginationEntity {
 
     @JsonProperty("question_count")
     private String questionCount;
+
+    @JsonProperty("response_count")
+    private String responseCount;
 
     @JsonProperty("page_count")
     private String pageCount;
@@ -52,6 +57,9 @@ public class SurveyEntity extends PaginationEntity {
 
     @JsonProperty("summary_url")
     private String summaryUrl;
+
+    @JsonProperty("pages")
+    private List<PageEntity> pages;
 
     public String getSurveyId() {
         return surveyId;
@@ -99,6 +107,14 @@ public class SurveyEntity extends PaginationEntity {
 
     public void setQuestionCount(String questionCount) {
         this.questionCount = questionCount;
+    }
+
+    public String getResponseCount() {
+        return responseCount;
+    }
+
+    public void setResponseCount(String responseCount) {
+        this.responseCount = responseCount;
     }
 
     public String getPageCount() {
@@ -180,4 +196,17 @@ public class SurveyEntity extends PaginationEntity {
     public void setSummaryUrl(String summaryUrl) {
         this.summaryUrl = summaryUrl;
     }
+
+    public List<PageEntity> getPages() {
+        return pages;
+    }
+
+    public void setPages(List<PageEntity> pages) {
+        this.pages = pages;
+    }
+
+    public Survey toDto() {
+        return getBeanMapperBuilder().addPackagePrefix(Page.class).build().map(this, Survey.class);
+    }
+
 }

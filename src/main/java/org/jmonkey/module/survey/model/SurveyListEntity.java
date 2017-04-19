@@ -32,6 +32,6 @@ public class SurveyListEntity extends PaginationEntity {
     }
 
     public SurveyList toDto() {
-        return beanMapperBuilder.addPackagePrefix(Link.class).build().map(this, SurveyList.class);
+        return getBeanMapperBuilder().addPackagePrefix(Link.class).build().map(this, SurveyList.class);
     }
 }

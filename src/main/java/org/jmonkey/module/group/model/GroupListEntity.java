@@ -32,6 +32,6 @@ public class GroupListEntity extends PaginationEntity {
     }
 
     public GroupList toDto() {
-        return beanMapperBuilder.addPackagePrefix(Link.class).build().map(this, GroupList.class);
+        return getBeanMapperBuilder().addPackagePrefix(Link.class).build().map(this, GroupList.class);
     }
 }
