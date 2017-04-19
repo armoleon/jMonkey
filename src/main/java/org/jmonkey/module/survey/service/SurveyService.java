@@ -1,6 +1,7 @@
 package org.jmonkey.module.survey.service;
 
 import org.jmonkey.module.base.service.BaseService;
+import org.jmonkey.module.collector.model.CollectorList;
 import org.jmonkey.module.survey.client.SurveyClient;
 import org.jmonkey.module.survey.client.SurveyClientProxy;
 import org.jmonkey.module.survey.model.Survey;
@@ -23,5 +24,9 @@ public class SurveyService extends BaseService {
 
     public Survey getSurveyDetails(String surveyId) {
         return surveyClient.getSurveyDetails(surveyId).toDto();
+    }
+
+    public CollectorList getSurveyCollectors(String surveyId) {
+        return surveyClient.getSurveyCollectors(surveyId).toDto();
     }
 }

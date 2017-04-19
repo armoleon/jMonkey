@@ -1,11 +1,11 @@
 package org.jmonkey.module.survey.model;
 
 import org.codehaus.jackson.annotate.JsonProperty;
-import org.jmonkey.module.common.model.PaginationEntity;
+import org.jmonkey.module.base.model.BaseEntity;
 
 import java.util.List;
 
-public class SurveyEntity extends PaginationEntity {
+public class SurveyEntity extends BaseEntity {
 
     @JsonProperty("id")
     private String surveyId;

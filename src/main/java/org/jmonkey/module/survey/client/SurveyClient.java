@@ -1,6 +1,7 @@
 package org.jmonkey.module.survey.client;
 
 import org.jmonkey.module.base.client.BaseClient;
+import org.jmonkey.module.collector.model.CollectorListEntity;
 import org.jmonkey.module.survey.model.SurveyEntity;
 import org.jmonkey.module.survey.model.SurveyListEntity;
 
@@ -26,4 +27,9 @@ public interface SurveyClient extends BaseClient {
     @Path("/{surveyId}/details")
     @Produces({MediaType.APPLICATION_JSON})
     SurveyEntity getSurveyDetails(@PathParam("surveyId") String surveyId);
+
+    @GET
+    @Path("/{surveyId}/collectors")
+    @Produces({MediaType.APPLICATION_JSON})
+    CollectorListEntity getSurveyCollectors(@PathParam("surveyId") String surveyId);
 }
