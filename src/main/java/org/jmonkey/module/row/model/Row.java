@@ -1,4 +1,4 @@
-package org.jmonkey.module.survey.model;
+package org.jmonkey.module.row.model;
 
 public class Row {
 

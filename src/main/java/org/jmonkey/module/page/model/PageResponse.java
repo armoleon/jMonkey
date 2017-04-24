@@ -1,12 +1,13 @@
-package org.jmonkey.module.survey.model;
+package org.jmonkey.module.page.model;
 
 import io.beanmapper.annotations.BeanCollection;
 import io.beanmapper.annotations.BeanCollectionUsage;
 import org.jmonkey.module.base.model.BaseDto;
+import org.jmonkey.module.question.model.QuestionResponse;
 
 import java.util.List;
 
-public class Page extends BaseDto {
+public class PageResponse extends BaseDto {
 
     private String id;
     private String title;
@@ -14,8 +15,8 @@ public class Page extends BaseDto {
     private Integer position;
     private Integer questionCount;
 
-    @BeanCollection(elementType = Question.class, beanCollectionUsage = BeanCollectionUsage.CONSTRUCT)
-    private List<Question> questions;
+    @BeanCollection(elementType = QuestionResponse.class, beanCollectionUsage = BeanCollectionUsage.CONSTRUCT)
+    private List<QuestionResponse> questions;
 
     public String getId() {
         return id;
@@ -57,11 +58,11 @@ public class Page extends BaseDto {
         this.questionCount = questionCount;
     }
 
-    public List<Question> getQuestions() {
+    public List<QuestionResponse> getQuestions() {
         return questions;
     }
 
-    public void setQuestions(List<Question> questions) {
+    public void setQuestions(List<QuestionResponse> questions) {
         this.questions = questions;
     }
 }

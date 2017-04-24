@@ -2,6 +2,8 @@ package org.jmonkey.module.survey.model;
 
 import org.codehaus.jackson.annotate.JsonProperty;
 import org.jmonkey.module.base.model.BaseEntity;
+import org.jmonkey.module.page.model.Page;
+import org.jmonkey.module.page.model.PageEntity;
 
 import java.util.List;
 

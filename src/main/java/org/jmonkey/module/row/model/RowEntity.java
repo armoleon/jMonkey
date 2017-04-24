@@ -1,15 +1,12 @@
-package org.jmonkey.module.survey.model;
+package org.jmonkey.module.row.model;
 
 import org.codehaus.jackson.annotate.JsonProperty;
 import org.jmonkey.module.base.model.BaseEntity;
 
-public class ChoiceEntity extends BaseEntity {
+public class RowEntity extends BaseEntity {
 
     @JsonProperty("id")
     private String id;
-
-    @JsonProperty("description")
-    private String description;
 
     @JsonProperty("text")
     private String text;
@@ -20,23 +17,12 @@ public class ChoiceEntity extends BaseEntity {
     @JsonProperty("visible")
     private Boolean visible;
 
-    @JsonProperty("weight")
-    private Integer weight;
-
     public String getId() {
         return id;
     }
 
     public void setId(String id) {
         this.id = id;
-    }
-
-    public String getDescription() {
-        return description;
-    }
-
-    public void setDescription(String description) {
-        this.description = description;
     }
 
     public String getText() {
@@ -61,13 +47,5 @@ public class ChoiceEntity extends BaseEntity {
 
     public void setVisible(Boolean visible) {
         this.visible = visible;
-    }
-
-    public Integer getWeight() {
-        return weight;
-    }
-
-    public void setWeight(Integer weight) {
-        this.weight = weight;
     }
 }

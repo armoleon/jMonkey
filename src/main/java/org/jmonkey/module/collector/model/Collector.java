@@ -5,6 +5,7 @@ import org.jmonkey.module.base.model.BaseDto;
 public class Collector extends BaseDto {
     private String id;
     private String name;
+    private String status;
     private String href;
     private String url;
     private String dateCreated;
@@ -26,6 +27,14 @@ public class Collector extends BaseDto {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
     }
 
     public String getHref() {

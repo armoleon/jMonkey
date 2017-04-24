@@ -1,24 +1,25 @@
-package org.jmonkey.module.survey.model;
+package org.jmonkey.module.column.model;
 
 import org.codehaus.jackson.annotate.JsonProperty;
 import org.jmonkey.module.base.model.BaseEntity;
+import org.jmonkey.module.choice.model.ChoiceEntity;
 
 import java.util.List;
 
-public class AnswerEntity extends BaseEntity {
+public class ColumnEntity extends BaseEntity {
 
-    @JsonProperty("rows")
-    private List<RowEntity> rows;
+    @JsonProperty("text")
+    private String text;
 
     @JsonProperty("choices")
     private List<ChoiceEntity> choices;
 
-    public List<RowEntity> getRows() {
-        return rows;
+    public String getText() {
+        return text;
     }
 
-    public void setRows(List<RowEntity> rows) {
-        this.rows = rows;
+    public void setText(String text) {
+        this.text = text;
     }
 
     public List<ChoiceEntity> getChoices() {

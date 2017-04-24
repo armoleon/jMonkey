@@ -1,22 +1,23 @@
-package org.jmonkey.module.survey.model;
+package org.jmonkey.module.column.model;
 
 import io.beanmapper.annotations.BeanCollection;
 import io.beanmapper.annotations.BeanCollectionUsage;
+import org.jmonkey.module.base.model.BaseDto;
+import org.jmonkey.module.choice.model.Choice;
 
 import java.util.List;
 
-public class Answer {
-    @BeanCollection(elementType = Question.class, beanCollectionUsage = BeanCollectionUsage.CONSTRUCT)
-    private List<Row> rows;
+public class Column extends BaseDto {
+    private String text;
     @BeanCollection(elementType = Choice.class, beanCollectionUsage = BeanCollectionUsage.CONSTRUCT)
     private List<Choice> choices;
 
-    public List<Row> getRows() {
-        return rows;
+    public String getText() {
+        return text;
     }
 
-    public void setRows(List<Row> rows) {
-        this.rows = rows;
+    public void setText(String text) {
+        this.text = text;
     }
 
     public List<Choice> getChoices() {

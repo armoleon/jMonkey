@@ -1,7 +1,9 @@
-package org.jmonkey.module.survey.model;
+package org.jmonkey.module.question.model;
 
 import org.codehaus.jackson.annotate.JsonProperty;
+import org.jmonkey.module.answer.model.AnswerEntity;
 import org.jmonkey.module.base.model.BaseEntity;
+import org.jmonkey.module.heading.model.HeadingEntity;
 
 import java.util.List;
 

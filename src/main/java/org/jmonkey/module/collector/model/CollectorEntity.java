@@ -7,8 +7,10 @@ public class CollectorEntity extends BaseEntity {
 
     @JsonProperty("id")
     private String id;
-    @JsonProperty("id")
+    @JsonProperty("name")
     private String name;
+    @JsonProperty("status")
+    private String status;
     @JsonProperty("href")
     private String href;
     @JsonProperty("url")
@@ -36,6 +38,14 @@ public class CollectorEntity extends BaseEntity {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
     }
 
     public String getHref() {

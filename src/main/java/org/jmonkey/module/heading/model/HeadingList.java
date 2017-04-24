@@ -1,4 +1,4 @@
-package org.jmonkey.module.survey.model;
+package org.jmonkey.module.heading.model;
 
 import java.util.List;
 

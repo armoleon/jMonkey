@@ -3,6 +3,7 @@ package org.jmonkey.module.survey.model;
 import io.beanmapper.annotations.BeanCollection;
 import io.beanmapper.annotations.BeanCollectionUsage;
 import org.jmonkey.module.base.model.BaseDto;
+import org.jmonkey.module.page.model.Page;
 
 import java.util.List;
 

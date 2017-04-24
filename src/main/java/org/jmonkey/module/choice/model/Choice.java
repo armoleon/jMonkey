@@ -1,4 +1,4 @@
-package org.jmonkey.module.survey.model;
+package org.jmonkey.module.choice.model;
 
 public class Choice {
 

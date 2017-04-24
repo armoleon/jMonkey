@@ -1,21 +1,29 @@
-package org.jmonkey.module.survey.model;
+package org.jmonkey.module.question.model;
 
-import io.beanmapper.annotations.BeanCollection;
-import io.beanmapper.annotations.BeanCollectionUsage;
-import org.jmonkey.module.base.model.BaseDto;
+import org.codehaus.jackson.annotate.JsonProperty;
+import org.jmonkey.module.answer.model.AnswerResponseEntity;
+import org.jmonkey.module.heading.model.HeadingEntity;
 
 import java.util.List;
 
-public class Question extends BaseDto {
+public class QuestionResponseEntity {
+    @JsonProperty("id")
     private String id;
+
+    @JsonProperty("visible")
     private String visible;
+
+    @JsonProperty("family")
     private String family;
+
+    @JsonProperty("subtype")
     private String subtype;
-    private Answer answers;
 
-    @BeanCollection(elementType = Heading.class, beanCollectionUsage = BeanCollectionUsage.CONSTRUCT)
-    private List<Heading> headings;
+    @JsonProperty("headings")
+    private List<HeadingEntity> headings;
 
+    @JsonProperty("answers")
+    private List<AnswerResponseEntity> answers;
 
     public String getId() {
         return id;
@@ -49,20 +57,19 @@ public class Question extends BaseDto {
         this.subtype = subtype;
     }
 
-    public List<Heading> getHeadings() {
+    public List<HeadingEntity> getHeadings() {
         return headings;
     }
 
-    public void setHeadings(List<Heading> headings) {
+    public void setHeadings(List<HeadingEntity> headings) {
         this.headings = headings;
     }
 
-    public Answer getAnswers() {
+    public List<AnswerResponseEntity> getAnswers() {
         return answers;
     }
 
-    public void setAnswers(Answer answers) {
+    public void setAnswers(List<AnswerResponseEntity> answers) {
         this.answers = answers;
     }
 }
-

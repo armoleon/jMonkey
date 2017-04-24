@@ -1,4 +1,4 @@
-package org.jmonkey.module.survey.model;
+package org.jmonkey.module.heading.model;
 
 import org.codehaus.jackson.annotate.JsonProperty;
 import org.jmonkey.module.base.model.BaseEntity;
