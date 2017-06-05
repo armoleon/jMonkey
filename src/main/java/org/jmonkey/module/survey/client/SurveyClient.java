@@ -6,18 +6,19 @@ import org.jmonkey.module.response.model.ResponseListEntity;
 import org.jmonkey.module.survey.model.SurveyEntity;
 import org.jmonkey.module.survey.model.SurveyListEntity;
 
-import javax.ws.rs.GET;
-import javax.ws.rs.Path;
-import javax.ws.rs.PathParam;
-import javax.ws.rs.Produces;
+import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
+import java.util.Date;
 
 @Path("/surveys")
 public interface SurveyClient extends BaseClient {
 
     @GET
     @Produces({MediaType.APPLICATION_JSON})
-    SurveyListEntity getSurveys();
+    SurveyListEntity getSurveys(@QueryParam("page") Integer page, @QueryParam("per_page") Integer limit, @QueryParam("sort_by") String sortBy,
+                                @QueryParam("sort_order") String sortOrder, @QueryParam("include") String include, @QueryParam("title") String
+                                        title, @QueryParam("start_modified_at") Date startModifiedAt, @QueryParam("end_modified_at") Date
+                                        endModifiedAt);
 
     @GET
     @Path("/{surveyId}")

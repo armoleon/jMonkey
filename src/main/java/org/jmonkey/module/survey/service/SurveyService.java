@@ -7,6 +7,7 @@ import org.jmonkey.module.survey.client.SurveyClient;
 import org.jmonkey.module.survey.client.SurveyClientProxy;
 import org.jmonkey.module.survey.model.Survey;
 import org.jmonkey.module.survey.model.SurveyList;
+import org.jmonkey.module.survey.model.param.SurveyQuery;
 
 public class SurveyService extends BaseService {
     private SurveyClient surveyClient;
@@ -15,8 +16,10 @@ public class SurveyService extends BaseService {
         surveyClient = new SurveyClientProxy(addAuthorizationHeader(accessToken));
     }
 
-    public SurveyList getSurveys() {
-        return surveyClient.getSurveys().toDto();
+    public SurveyList getSurveys(SurveyQuery surveyQuery) {
+        return surveyClient.getSurveys(surveyQuery.getPage(), surveyQuery.getLimit(), surveyQuery.getSortBy() == null ? null : surveyQuery
+                .getSortBy().getName(), surveyQuery.getSortOrder() == null ? null : surveyQuery.getSortOrder().getName(), surveyQuery
+                .getIncludeFieldsQueryParam(), surveyQuery.getTitle(), surveyQuery.getStartModifiedAt(), surveyQuery.getEndModifiedAt()).toDto();
     }
 
     public Survey getSurvey(String surveyId) {

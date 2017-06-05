@@ -1,7 +1,7 @@
 package org.jmonkey.module.base.service;
 
 import org.jmonkey.module.common.filter.CustomRequestHeaderFilter;
-import org.jmonkey.module.common.model.HeaderParameter;
+import org.jmonkey.module.common.model.param.HeaderParameter;
 
 public abstract class BaseService {
 

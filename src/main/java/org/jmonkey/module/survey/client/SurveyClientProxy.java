@@ -7,6 +7,8 @@ import org.jmonkey.module.response.model.ResponseListEntity;
 import org.jmonkey.module.survey.model.SurveyEntity;
 import org.jmonkey.module.survey.model.SurveyListEntity;
 
+import java.util.Date;
+
 public class SurveyClientProxy extends BaseClientProxy<SurveyClient> implements SurveyClient {
     private SurveyClient surveyClient;
 
@@ -14,8 +16,9 @@ public class SurveyClientProxy extends BaseClientProxy<SurveyClient> implements 
         surveyClient = generateClient(SurveyClient.class, customRequestHeaderFilter);
     }
 
-    public SurveyListEntity getSurveys() {
-        return surveyClient.getSurveys();
+    public SurveyListEntity getSurveys(Integer page, Integer limit, String sortBy, String sortOrder, String include, String title, Date
+            startModifiedAt, Date endModifiedAt) {
+        return surveyClient.getSurveys(page, limit, sortBy, sortOrder, include, title, startModifiedAt, endModifiedAt);
     }
 
     public SurveyEntity getSurvey(String surveyId) {

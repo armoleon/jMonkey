@@ -1,4 +1,4 @@
-package org.jmonkey.module.common.model;
+package org.jmonkey.module.common.model.param;
 
 public class HeaderParameter {
 

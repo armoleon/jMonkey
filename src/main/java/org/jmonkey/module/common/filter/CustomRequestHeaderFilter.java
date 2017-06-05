@@ -1,6 +1,6 @@
 package org.jmonkey.module.common.filter;
 
-import org.jmonkey.module.common.model.HeaderParameter;
+import org.jmonkey.module.common.model.param.HeaderParameter;
 
 import javax.ws.rs.client.ClientRequestContext;
 import javax.ws.rs.client.ClientRequestFilter;
@@ -10,7 +10,7 @@ import java.util.List;
 
 public class CustomRequestHeaderFilter implements ClientRequestFilter {
 
-    private final List<HeaderParameter> headerParameterList = new ArrayList<HeaderParameter>();
+    private final List<HeaderParameter> headerParameterList = new ArrayList<>();
 
 
     public void addHeaderParameter(HeaderParameter headerParameter) {
