@@ -33,7 +33,9 @@ public class SurveyClientProxy extends BaseClientProxy<SurveyClient> implements 
         return surveyClient.getSurveyCollectors(surveyId);
     }
 
-    public ResponseListEntity getAllSurveyResponses(String surveyId) {
-        return surveyClient.getAllSurveyResponses(surveyId);
+    public ResponseListEntity getAllSurveyResponses(String surveyId, Integer page, Integer limit, String sortBy, String sortOrder, Date
+            startCreatedAt, Date endCreatedAt, Date startModifiedAt, Date endModifiedAt) {
+        return surveyClient.getAllSurveyResponses(surveyId, page, limit, sortBy, sortOrder, startCreatedAt, endCreatedAt, startModifiedAt,
+                endModifiedAt);
     }
 }

@@ -1,12 +1,12 @@
 package org.jmonkey.module.question.model;
 
 import org.codehaus.jackson.annotate.JsonProperty;
-import org.jmonkey.module.answer.model.AnswerResponseEntity;
+import org.jmonkey.module.answer.model.GivenAnswerEntity;
 import org.jmonkey.module.heading.model.HeadingEntity;
 
 import java.util.List;
 
-public class QuestionResponseEntity {
+public class AnsweredQuestionEntity {
     @JsonProperty("id")
     private String id;
 
@@ -23,7 +23,7 @@ public class QuestionResponseEntity {
     private List<HeadingEntity> headings;
 
     @JsonProperty("answers")
-    private List<AnswerResponseEntity> answers;
+    private List<GivenAnswerEntity> answers;
 
     public String getId() {
         return id;
@@ -65,11 +65,11 @@ public class QuestionResponseEntity {
         this.headings = headings;
     }
 
-    public List<AnswerResponseEntity> getAnswers() {
+    public List<GivenAnswerEntity> getAnswers() {
         return answers;
     }
 
-    public void setAnswers(List<AnswerResponseEntity> answers) {
+    public void setAnswers(List<GivenAnswerEntity> answers) {
         this.answers = answers;
     }
 }

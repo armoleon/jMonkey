@@ -1,23 +1,13 @@
 package org.jmonkey.module.answer.model;
 
-import org.codehaus.jackson.annotate.JsonProperty;
-import org.jmonkey.module.base.model.BaseEntity;
+import org.jmonkey.module.base.model.BaseDto;
 
-public class AnswerResponseEntity extends BaseEntity {
+public class GivenAnswer extends BaseDto {
 
-    @JsonProperty("choice_id")
     private String choiceId;
-
-    @JsonProperty("row_id")
     private String rowId;
-
-    @JsonProperty("col_id")
     private String columnId;
-
-    @JsonProperty("other_id")
     private String otherId;
-
-    @JsonProperty("text")
     private String text;
 
     public String getChoiceId() {

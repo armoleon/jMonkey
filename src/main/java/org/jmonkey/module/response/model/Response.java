@@ -3,7 +3,7 @@ package org.jmonkey.module.response.model;
 import io.beanmapper.annotations.BeanCollection;
 import io.beanmapper.annotations.BeanCollectionUsage;
 import org.jmonkey.module.base.model.BaseDto;
-import org.jmonkey.module.page.model.PageResponse;
+import org.jmonkey.module.page.model.AnsweredPage;
 
 import java.util.List;
 
@@ -16,9 +16,10 @@ public class Response extends BaseDto {
     private String href;
     private String dateCreated;
     private String dateModified;
+    private String ipAddress;
 
-    @BeanCollection(elementType = PageResponse.class, beanCollectionUsage = BeanCollectionUsage.CONSTRUCT)
-    private List<PageResponse> pages;
+    @BeanCollection(elementType = AnsweredPage.class, beanCollectionUsage = BeanCollectionUsage.CONSTRUCT)
+    private List<AnsweredPage> pages;
 
     public String getId() {
         return id;
@@ -84,11 +85,19 @@ public class Response extends BaseDto {
         this.dateModified = dateModified;
     }
 
-    public List<PageResponse> getPages() {
+    public String getIpAddress() {
+        return ipAddress;
+    }
+
+    public void setIpAddress(String ipAddress) {
+        this.ipAddress = ipAddress;
+    }
+
+    public List<AnsweredPage> getPages() {
         return pages;
     }
 
-    public void setPages(List<PageResponse> pages) {
+    public void setPages(List<AnsweredPage> pages) {
         this.pages = pages;
     }
 }

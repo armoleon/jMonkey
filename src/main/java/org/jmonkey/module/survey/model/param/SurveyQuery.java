@@ -47,13 +47,13 @@ public class SurveyQuery extends PagingQuery<SurveyQuery> {
         return this;
     }
 
-    public SurveyQuery fromModifiedDate(Date fromModifiedDate) {
-        this.startModifiedAt = fromModifiedDate;
+    public SurveyQuery startModifiedAt(Date startModifiedAt) {
+        this.startModifiedAt = startModifiedAt;
         return this;
     }
 
-    public SurveyQuery toModifiedDate(Date toModifiedDate) {
-        this.endModifiedAt = toModifiedDate;
+    public SurveyQuery endModifiedAt(Date endModifiedAt) {
+        this.endModifiedAt = endModifiedAt;
         return this;
     }
 

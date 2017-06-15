@@ -3,11 +3,11 @@ package org.jmonkey.module.page.model;
 import io.beanmapper.annotations.BeanCollection;
 import io.beanmapper.annotations.BeanCollectionUsage;
 import org.jmonkey.module.base.model.BaseDto;
-import org.jmonkey.module.question.model.QuestionResponse;
+import org.jmonkey.module.question.model.AnsweredQuestion;
 
 import java.util.List;
 
-public class PageResponse extends BaseDto {
+public class AnsweredPage extends BaseDto {
 
     private String id;
     private String title;
@@ -15,8 +15,8 @@ public class PageResponse extends BaseDto {
     private Integer position;
     private Integer questionCount;
 
-    @BeanCollection(elementType = QuestionResponse.class, beanCollectionUsage = BeanCollectionUsage.CONSTRUCT)
-    private List<QuestionResponse> questions;
+    @BeanCollection(elementType = AnsweredQuestion.class, beanCollectionUsage = BeanCollectionUsage.CONSTRUCT)
+    private List<AnsweredQuestion> questions;
 
     public String getId() {
         return id;
@@ -58,11 +58,11 @@ public class PageResponse extends BaseDto {
         this.questionCount = questionCount;
     }
 
-    public List<QuestionResponse> getQuestions() {
+    public List<AnsweredQuestion> getQuestions() {
         return questions;
     }
 
-    public void setQuestions(List<QuestionResponse> questions) {
-        this.questions = questions;
+    public void setQuestions(List<AnsweredQuestion> answeredQuestions) {
+        this.questions = answeredQuestions;
     }
 }

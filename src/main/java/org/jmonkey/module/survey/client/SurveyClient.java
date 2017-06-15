@@ -38,5 +38,11 @@ public interface SurveyClient extends BaseClient {
     @GET
     @Path("/{surveyId}/responses/bulk")
     @Produces({MediaType.APPLICATION_JSON})
-    ResponseListEntity getAllSurveyResponses(@PathParam("surveyId") String surveyId);
+    ResponseListEntity getAllSurveyResponses(@PathParam("surveyId") String surveyId, @QueryParam("page") Integer page, @QueryParam("per_page")
+            Integer limit, @QueryParam("sort_by") String sortBy, @QueryParam("sort_order") String sortOrder, @QueryParam("start_created_at") Date
+            start_created_at, @QueryParam("end_created_at") Date end_created_at, @QueryParam("start_modified_at") Date startModifiedAt, @QueryParam
+            ("end_modified_at") Date endModifiedAt);
+
 }
+
+

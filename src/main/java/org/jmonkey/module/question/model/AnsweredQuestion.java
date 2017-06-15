@@ -2,21 +2,21 @@ package org.jmonkey.module.question.model;
 
 import io.beanmapper.annotations.BeanCollection;
 import io.beanmapper.annotations.BeanCollectionUsage;
-import org.jmonkey.module.answer.model.AnswerResponse;
+import org.jmonkey.module.answer.model.GivenAnswer;
 import org.jmonkey.module.base.model.BaseDto;
 import org.jmonkey.module.heading.model.Heading;
 
 import java.util.List;
 
-public class QuestionResponse extends BaseDto {
+public class AnsweredQuestion extends BaseDto {
 
     private String id;
     private String visible;
     private String family;
     private String subtype;
 
-    @BeanCollection(elementType = AnswerResponse.class, beanCollectionUsage = BeanCollectionUsage.CONSTRUCT)
-    private List<AnswerResponse> answers;
+    @BeanCollection(elementType = GivenAnswer.class, beanCollectionUsage = BeanCollectionUsage.CONSTRUCT)
+    private List<GivenAnswer> answers;
 
     @BeanCollection(elementType = Heading.class, beanCollectionUsage = BeanCollectionUsage.CONSTRUCT)
     private List<Heading> headings;
@@ -53,11 +53,11 @@ public class QuestionResponse extends BaseDto {
         this.subtype = subtype;
     }
 
-    public List<AnswerResponse> getAnswers() {
+    public List<GivenAnswer> getAnswers() {
         return answers;
     }
 
-    public void setAnswers(List<AnswerResponse> answers) {
+    public void setAnswers(List<GivenAnswer> answers) {
         this.answers = answers;
     }
 

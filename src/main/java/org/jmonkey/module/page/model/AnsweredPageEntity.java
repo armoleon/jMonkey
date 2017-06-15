@@ -2,11 +2,11 @@ package org.jmonkey.module.page.model;
 
 import org.codehaus.jackson.annotate.JsonProperty;
 import org.jmonkey.module.base.model.BaseEntity;
-import org.jmonkey.module.question.model.QuestionResponseEntity;
+import org.jmonkey.module.question.model.AnsweredQuestionEntity;
 
 import java.util.List;
 
-public class PageResponseEntity extends BaseEntity {
+public class AnsweredPageEntity extends BaseEntity {
 
     @JsonProperty("id")
     private String id;
@@ -24,7 +24,7 @@ public class PageResponseEntity extends BaseEntity {
     private Integer questionCount;
 
     @JsonProperty("questions")
-    private List<QuestionResponseEntity> questions;
+    private List<AnsweredQuestionEntity> questions;
 
     public String getId() {
         return id;
@@ -66,11 +66,11 @@ public class PageResponseEntity extends BaseEntity {
         this.questionCount = questionCount;
     }
 
-    public List<QuestionResponseEntity> getQuestions() {
+    public List<AnsweredQuestionEntity> getQuestions() {
         return questions;
     }
 
-    public void setQuestions(List<QuestionResponseEntity> questions) {
+    public void setQuestions(List<AnsweredQuestionEntity> questions) {
         this.questions = questions;
     }
 }

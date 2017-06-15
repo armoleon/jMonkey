@@ -2,7 +2,7 @@ package org.jmonkey.module.response.model;
 
 import org.codehaus.jackson.annotate.JsonProperty;
 import org.jmonkey.module.base.model.BaseEntity;
-import org.jmonkey.module.page.model.PageResponseEntity;
+import org.jmonkey.module.page.model.AnsweredPageEntity;
 
 import java.util.List;
 
@@ -32,8 +32,11 @@ public class ResponseEntity extends BaseEntity {
     @JsonProperty("date_modified")
     private String dateModified;
 
+    @JsonProperty("ip_address")
+    private String ipAddress;
+
     @JsonProperty("pages")
-    private List<PageResponseEntity> pages;
+    private List<AnsweredPageEntity> pages;
 
     public String getId() {
         return id;
@@ -99,11 +102,19 @@ public class ResponseEntity extends BaseEntity {
         this.dateModified = dateModified;
     }
 
-    public List<PageResponseEntity> getPages() {
+    public String getIpAddress() {
+        return ipAddress;
+    }
+
+    public void setIpAddress(String ipAddress) {
+        this.ipAddress = ipAddress;
+    }
+
+    public List<AnsweredPageEntity> getPages() {
         return pages;
     }
 
-    public void setPages(List<PageResponseEntity> pages) {
+    public void setPages(List<AnsweredPageEntity> pages) {
         this.pages = pages;
     }
 }
