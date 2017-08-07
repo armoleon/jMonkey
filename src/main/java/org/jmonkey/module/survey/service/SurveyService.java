@@ -3,6 +3,7 @@ package org.jmonkey.module.survey.service;
 import org.jmonkey.module.base.service.BaseService;
 import org.jmonkey.module.collector.model.CollectorList;
 import org.jmonkey.module.response.model.ResponseList;
+import org.jmonkey.module.response.model.ResponseListEntity;
 import org.jmonkey.module.response.param.SurveyResponseQuery;
 import org.jmonkey.module.survey.client.SurveyClient;
 import org.jmonkey.module.survey.client.SurveyClientProxy;
@@ -36,9 +37,10 @@ public class SurveyService extends BaseService {
     }
 
     public ResponseList getAllSurveyResponses(String surveyId, SurveyResponseQuery surveyResponseQuery) {
-        return surveyClient.getAllSurveyResponses(surveyId, surveyResponseQuery.getPage(), surveyResponseQuery.getLimit(), surveyResponseQuery
-                .getSortBy() == null ? null : surveyResponseQuery.getSortBy().getName(), surveyResponseQuery.getSortOrder() == null ? null :
-                surveyResponseQuery.getSortOrder().getName(), surveyResponseQuery.getStartCreatedAt(), surveyResponseQuery.getEndCreatedAt(),
-                surveyResponseQuery.getStartModifiedAt(), surveyResponseQuery.getEndModifiedAt()).toDto();
+        ResponseListEntity allSurveyResponses = surveyClient.getAllSurveyResponses(surveyId, surveyResponseQuery.getPage(), surveyResponseQuery
+                .getLimit(), surveyResponseQuery.getSortBy() == null ? null : surveyResponseQuery.getSortBy().getName(), surveyResponseQuery
+                .getSortOrder() == null ? null : surveyResponseQuery.getSortOrder().getName(), surveyResponseQuery.getStartCreatedAt(), 
+                surveyResponseQuery.getEndCreatedAt(), surveyResponseQuery.getStartModifiedAt(), surveyResponseQuery.getEndModifiedAt());
+        return allSurveyResponses.toDto();
     }
 }

@@ -13,13 +13,16 @@ public class QuestionEntity extends BaseEntity {
     private String id;
 
     @JsonProperty("visible")
-    private String visible;
+    private Boolean visible;
 
     @JsonProperty("family")
     private String family;
 
     @JsonProperty("subtype")
     private String subtype;
+
+    @JsonProperty("position")
+    private Integer position;
 
     @JsonProperty("headings")
     private List<HeadingEntity> headings;
@@ -35,11 +38,11 @@ public class QuestionEntity extends BaseEntity {
         this.id = id;
     }
 
-    public String getVisible() {
+    public Boolean getVisible() {
         return visible;
     }
 
-    public void setVisible(String visible) {
+    public void setVisible(Boolean visible) {
         this.visible = visible;
     }
 
@@ -57,6 +60,14 @@ public class QuestionEntity extends BaseEntity {
 
     public void setSubtype(String subtype) {
         this.subtype = subtype;
+    }
+
+    public Integer getPosition() {
+        return position;
+    }
+
+    public void setPosition(Integer position) {
+        this.position = position;
     }
 
     public List<HeadingEntity> getHeadings() {

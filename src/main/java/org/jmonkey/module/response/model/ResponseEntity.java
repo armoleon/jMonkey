@@ -35,6 +35,9 @@ public class ResponseEntity extends BaseEntity {
     @JsonProperty("ip_address")
     private String ipAddress;
 
+    @JsonProperty("custom_value")
+    private String customValue;
+
     @JsonProperty("pages")
     private List<AnsweredPageEntity> pages;
 
@@ -108,6 +111,14 @@ public class ResponseEntity extends BaseEntity {
 
     public void setIpAddress(String ipAddress) {
         this.ipAddress = ipAddress;
+    }
+
+    public String getCustomValue() {
+        return customValue;
+    }
+
+    public void setCustomValue(String customValue) {
+        this.customValue = customValue;
     }
 
     public List<AnsweredPageEntity> getPages() {

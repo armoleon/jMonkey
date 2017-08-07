@@ -10,9 +10,10 @@ import java.util.List;
 
 public class Question extends BaseDto {
     private String id;
-    private String visible;
+    private Boolean visible;
     private String family;
     private String subtype;
+    private Integer position;
     private Answer answers;
 
     @BeanCollection(elementType = Heading.class, beanCollectionUsage = BeanCollectionUsage.CONSTRUCT)
@@ -27,11 +28,11 @@ public class Question extends BaseDto {
         this.id = id;
     }
 
-    public String getVisible() {
+    public Boolean getVisible() {
         return visible;
     }
 
-    public void setVisible(String visible) {
+    public void setVisible(Boolean visible) {
         this.visible = visible;
     }
 
@@ -49,6 +50,14 @@ public class Question extends BaseDto {
 
     public void setSubtype(String subtype) {
         this.subtype = subtype;
+    }
+
+    public Integer getPosition() {
+        return position;
+    }
+
+    public void setPosition(Integer position) {
+        this.position = position;
     }
 
     public List<Heading> getHeadings() {

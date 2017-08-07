@@ -1,4 +1,4 @@
-package org.jmonkey.module.common.model;
+package org.jmonkey.module.link.model;
 
 import org.jmonkey.module.base.model.BaseDto;
 

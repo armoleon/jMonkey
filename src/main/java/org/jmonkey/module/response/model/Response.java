@@ -17,6 +17,7 @@ public class Response extends BaseDto {
     private String dateCreated;
     private String dateModified;
     private String ipAddress;
+    private String customValue;
 
     @BeanCollection(elementType = AnsweredPage.class, beanCollectionUsage = BeanCollectionUsage.CONSTRUCT)
     private List<AnsweredPage> pages;
@@ -91,6 +92,14 @@ public class Response extends BaseDto {
 
     public void setIpAddress(String ipAddress) {
         this.ipAddress = ipAddress;
+    }
+
+    public String getCustomValue() {
+        return customValue;
+    }
+
+    public void setCustomValue(String customValue) {
+        this.customValue = customValue;
     }
 
     public List<AnsweredPage> getPages() {

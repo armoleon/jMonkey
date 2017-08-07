@@ -2,8 +2,8 @@ package org.jmonkey.module.response.model;
 
 import io.beanmapper.annotations.BeanCollection;
 import io.beanmapper.annotations.BeanCollectionUsage;
-import org.jmonkey.module.common.model.Link;
 import org.jmonkey.module.common.model.Pagination;
+import org.jmonkey.module.link.model.Link;
 
 import java.util.List;
 

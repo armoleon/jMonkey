@@ -1,9 +1,9 @@
 package org.jmonkey.module.collector.model;
 
 import org.codehaus.jackson.annotate.JsonProperty;
-import org.jmonkey.module.common.model.Link;
-import org.jmonkey.module.common.model.LinkEntity;
 import org.jmonkey.module.common.model.PaginationEntity;
+import org.jmonkey.module.link.model.Link;
+import org.jmonkey.module.link.model.LinkEntity;
 
 import java.util.List;
 

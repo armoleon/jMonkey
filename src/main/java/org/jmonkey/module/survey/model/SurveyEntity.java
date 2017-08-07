@@ -28,10 +28,10 @@ public class SurveyEntity extends BaseEntity {
     private String questionCount;
 
     @JsonProperty("response_count")
-    private String responseCount;
+    private Integer responseCount;
 
     @JsonProperty("page_count")
-    private String pageCount;
+    private Integer pageCount;
 
     @JsonProperty("date_created")
     private String dateCreated;
@@ -111,19 +111,19 @@ public class SurveyEntity extends BaseEntity {
         this.questionCount = questionCount;
     }
 
-    public String getResponseCount() {
+    public Integer getResponseCount() {
         return responseCount;
     }
 
-    public void setResponseCount(String responseCount) {
+    public void setResponseCount(Integer responseCount) {
         this.responseCount = responseCount;
     }
 
-    public String getPageCount() {
+    public Integer getPageCount() {
         return pageCount;
     }
 
-    public void setPageCount(String pageCount) {
+    public void setPageCount(Integer pageCount) {
         this.pageCount = pageCount;
     }
 

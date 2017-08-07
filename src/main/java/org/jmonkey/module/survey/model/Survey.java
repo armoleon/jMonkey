@@ -14,8 +14,8 @@ public class Survey extends BaseDto {
     private String nickName;
     private String category;
     private String language;
-    private String questionCount;
-    private String responseCount;
+    private Integer questionCount;
+    private Integer responseCount;
     private String pageCount;
     private String dateCreated;
     private String dateModified;
@@ -70,19 +70,19 @@ public class Survey extends BaseDto {
         this.language = language;
     }
 
-    public String getQuestionCount() {
+    public Integer getQuestionCount() {
         return questionCount;
     }
 
-    public void setQuestionCount(String questionCount) {
+    public void setQuestionCount(Integer questionCount) {
         this.questionCount = questionCount;
     }
 
-    public String getResponseCount() {
+    public Integer getResponseCount() {
         return responseCount;
     }
 
-    public void setResponseCount(String responseCount) {
+    public void setResponseCount(Integer responseCount) {
         this.responseCount = responseCount;
     }
 
