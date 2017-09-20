@@ -3,8 +3,8 @@ package org.jmonkey.module.error;
 import org.jmonkey.module.error.model.enumerated.ErrorCode;
 
 public class SurveyMonkeyServiceException extends RuntimeException {
-    private ErrorCode errorCode;
-    private Integer httpStatusCode;
+    private final ErrorCode errorCode;
+    private final Integer httpStatusCode;
 
     public SurveyMonkeyServiceException(String message, ErrorCode errorCode, Integer httpStatusCode) {
         super(message);
@@ -16,16 +16,8 @@ public class SurveyMonkeyServiceException extends RuntimeException {
         return errorCode;
     }
 
-    public void setErrorCode(ErrorCode errorCode) {
-        this.errorCode = errorCode;
-    }
-
     public Integer getHttpStatusCode() {
         return httpStatusCode;
-    }
-
-    public void setHttpStatusCode(Integer httpStatusCode) {
-        this.httpStatusCode = httpStatusCode;
     }
 
     @Override
