@@ -42,8 +42,8 @@ public class SurveyQuery extends PagingQuery<SurveyQuery> {
         return this;
     }
 
-    public SurveyQuery sortBy(SurveySortFields surveyFields) {
-        this.sortBy = surveyFields;
+    public SurveyQuery sortBy(SurveySortFields surveySortFields) {
+        this.sortBy = surveySortFields;
         return this;
     }
 

@@ -33,14 +33,17 @@ public interface SurveyClient extends BaseClient {
     @GET
     @Path("/{surveyId}/collectors")
     @Produces({MediaType.APPLICATION_JSON})
-    CollectorListEntity getSurveyCollectors(@PathParam("surveyId") String surveyId);
+    CollectorListEntity getSurveyCollectors(@PathParam("surveyId") String surveyId, @QueryParam("page") Integer page, @QueryParam("per_page")
+            Integer limit, @QueryParam("sort_by") String sortBy, @QueryParam("sort_order") String sortOrder, @QueryParam("include") String include,
+                                            @QueryParam("name") String name, @QueryParam("start_created_at") Date startCreatedAt, @QueryParam
+                                                    ("end_created_at") Date endCreatedAt);
 
     @GET
     @Path("/{surveyId}/responses/bulk")
     @Produces({MediaType.APPLICATION_JSON})
     ResponseListEntity getAllSurveyResponses(@PathParam("surveyId") String surveyId, @QueryParam("page") Integer page, @QueryParam("per_page")
             Integer limit, @QueryParam("sort_by") String sortBy, @QueryParam("sort_order") String sortOrder, @QueryParam("start_created_at") Date
-            start_created_at, @QueryParam("end_created_at") Date end_created_at, @QueryParam("start_modified_at") Date startModifiedAt, @QueryParam
+            startCreatedAt, @QueryParam("end_created_at") Date endCreatedAt, @QueryParam("start_modified_at") Date startModifiedAt, @QueryParam
             ("end_modified_at") Date endModifiedAt);
 
 }

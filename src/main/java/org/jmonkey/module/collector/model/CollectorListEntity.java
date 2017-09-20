@@ -10,16 +10,16 @@ import java.util.List;
 public class CollectorListEntity extends PaginationEntity {
 
     @JsonProperty("data")
-    private List<Collector> collectors;
+    private List<CollectorEntity> collectors;
 
     @JsonProperty("links")
     private LinkEntity links;
 
-    public List<Collector> getCollectors() {
+    public List<CollectorEntity> getCollectors() {
         return collectors;
     }
 
-    public void setCollectors(List<Collector> collectors) {
+    public void setCollectors(List<CollectorEntity> collectors) {
         this.collectors = collectors;
     }
 

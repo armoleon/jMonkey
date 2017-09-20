@@ -12,6 +12,22 @@ public class SurveyMonkeyServiceException extends RuntimeException {
         this.httpStatusCode = httpStatusCode;
     }
 
+    public ErrorCode getErrorCode() {
+        return errorCode;
+    }
+
+    public void setErrorCode(ErrorCode errorCode) {
+        this.errorCode = errorCode;
+    }
+
+    public Integer getHttpStatusCode() {
+        return httpStatusCode;
+    }
+
+    public void setHttpStatusCode(Integer httpStatusCode) {
+        this.httpStatusCode = httpStatusCode;
+    }
+
     @Override
     public String toString() {
         final StringBuilder sb = new StringBuilder("SurveyMonkeyServiceException{");

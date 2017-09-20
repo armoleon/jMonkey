@@ -1,6 +1,7 @@
 package org.jmonkey.module.survey.model;
 
 import org.codehaus.jackson.annotate.JsonProperty;
+import org.jmonkey.module.answer.model.Answer;
 import org.jmonkey.module.base.model.BaseEntity;
 import org.jmonkey.module.page.model.Page;
 import org.jmonkey.module.page.model.PageEntity;
@@ -208,7 +209,7 @@ public class SurveyEntity extends BaseEntity {
     }
 
     public Survey toDto() {
-        return getBeanMapperBuilder().addPackagePrefix(Page.class).build().map(this, Survey.class);
+        return getBeanMapperBuilder().addPackagePrefix(Page.class).addPackagePrefix(Answer.class).build().map(this, Survey.class);
     }
 
 }
